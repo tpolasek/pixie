@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pixie</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-wrap">
+    <header id="hud">
+      <div id="prompt" class="hud-cell">Herd the black pixies into the <span id="target">green</span> zone</div>
+      <div class="hud-row">
+        <div class="hud-cell">Captured: <span id="score">0</span> / 100</div>
+        <div class="hud-cell">Walls: <span id="walls">0</span></div>
+        <div class="hud-cell">Time: <span id="time">0:00</span></div>
+      </div>
+      <div id="howto" class="hud-cell">
+        Click = place / remove wall &nbsp; R = restart
+      </div>
+    </header>
+
+    <div id="stage">
+      <canvas id="game" width="640" height="480"></canvas>
+
+      <div id="overlay" class="overlay">
+        <div class="overlay-box">
+          <h1>PIXIE</h1>
+          <p id="overlay-msg">Nice!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="engine.js" defer></script>
+  <script src="game.js" defer></script>
+</body>
+</html>

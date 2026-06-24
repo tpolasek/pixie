@@ -1,0 +1,141 @@
+:root {
+  --bg: #000;
+  --grid: #7b2fbe;
+  --grid-dim: #5a2189;
+  --ink: #ffffff;
+  --accent: #ffd54a;
+  --danger: #ff4d6d;
+  --panel: #120022;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Courier New", ui-monospace, monospace;
+  letter-spacing: 0.5px;
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 16px;
+}
+
+#game-wrap {
+  width: 100%;
+  max-width: 640px;
+}
+
+#hud {
+  border: 3px solid var(--grid);
+  border-radius: 4px;
+  background: var(--panel);
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+#prompt {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--accent);
+  margin-bottom: 6px;
+  text-shadow: 0 0 4px rgba(255, 213, 74, 0.4);
+}
+
+#prompt #target { color: var(--ink); }
+
+.hud-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.hud-cell { font-size: 14px; }
+
+.hud-row .hud-cell {
+  flex: 1;
+  border: 1px solid var(--grid-dim);
+  padding: 4px 6px;
+  border-radius: 2px;
+  background: #0a0018;
+}
+
+#howto {
+  color: #b9a7d8;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+#score, #level, #lives {
+  vertical-align: middle;
+}
+
+#lives {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+#stage {
+  position: relative;
+  line-height: 0;
+}
+
+#game {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--bg);
+  border: 3px solid var(--grid);
+  border-radius: 4px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.75);
+  text-align: center;
+  line-height: normal;
+}
+
+.overlay.visible { display: flex; }
+
+.overlay-box {
+  border: 3px solid var(--grid);
+  background: var(--panel);
+  padding: 20px 28px;
+  border-radius: 4px;
+  box-shadow: 0 0 24px rgba(123, 47, 190, 0.6);
+}
+
+.overlay-box h1 {
+  margin: 0 0 10px;
+  font-size: 28px;
+  color: var(--accent);
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px rgba(255, 213, 74, 0.5);
+}
+
+.overlay-box p {
+  margin: 0;
+  font-size: 16px;
+  color: var(--ink);
+}
+
+.overlay-box .small {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #b9a7d8;
+}
